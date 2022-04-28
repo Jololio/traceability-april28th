@@ -11,8 +11,8 @@ var rollbar = new Rollbar({
 });
 
 rollbar.log('Hello world!')
-
-rollbar.log()
+rollbar.critical('This app is about to explode')
+rollbar.warning("Check the niceFunction to make sure it's not a bug")
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
